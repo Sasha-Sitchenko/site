@@ -1,0 +1,431 @@
+:root {
+    --primary: darkslategray;  
+    --accent: deepskyblue;     
+    --accent-hover: dodgerblue; 
+    --text-main: slategray;    
+    --bg-light: aliceblue;     
+    --white: white;            
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --card-border: lightgray;   
+    --header-bg: rgba(255, 255, 255, 0.9);
+    --grid-dots: gainsboro;    
+}
+
+/* Виправлений селектор для темної теми */
+body:has(#theme-toggle:checked) {
+    --primary: #f8fafc;          
+    --text-main: #94a3b8; 
+    --bg-light: #0f172a;         
+    --white: #1e293b;     
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    --card-border: #334155;
+    --header-bg: rgba(15, 23, 42, 0.9);
+    --grid-dots: #334155;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--bg-light); 
+    background-image: radial-gradient(var(--grid-dots) 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Стилі для перемикача теми */
+.theme-checkbox {
+    display: none;
+}
+
+.theme-label {
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.theme-label:hover {
+    background: rgba(0, 191, 255, 0.1);
+}
+
+.theme-label .sun {
+    display: none;
+}
+
+/* Логіка відображення іконок */
+body:has(#theme-toggle:checked) .theme-label .moon {
+    display: none;
+}
+
+body:has(#theme-toggle:checked) .theme-label .sun {
+    display: inline;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--header-bg);
+    backdrop-filter: blur(10px);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    margin-bottom: 2rem;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+.btn-pulse {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: var(--transition);
+    animation: pulse 2s infinite;
+}
+
+.section-padding {
+    padding: 5rem 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary);
+}
+
+/* Гнучка сітка курсів */
+.courses-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.course-card, .student-card, details {
+    background-color: var(--white);
+    border: 1px solid var(--card-border);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+}
+
+.course-card {
+    overflow: hidden;
+}
+
+.course-img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.course-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.course-card:hover .course-img {
+    transform: scale(1.1);
+}
+
+.course-content {
+    padding: 1.5rem;
+}
+
+.course-price {
+    font-weight: 800;
+    color: var(--accent);
+    font-size: 1.25rem;
+    display: block;
+    margin: 1rem 0;
+}
+
+.btn-card {
+    display: block;
+    text-align: center;
+    padding: 0.7rem;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-card:hover {
+    background: var(--accent);
+    color: white;
+}
+
+.progress-container {
+    background: var(--bg-light);
+    border-radius: 10px;
+    height: 10px;
+    margin: 15px 0 5px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+    width: var(--target-width); 
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.students-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.student-card {
+    text-align: center;
+    width: 250px;
+    padding: 1.5rem;
+}
+
+.student-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid var(--accent);
+    object-fit: cover;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+details {
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+summary {
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary);
+}
+
+.benefits {
+    padding: 60px 10%;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.benefit-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    padding: 3rem 10%;
+    text-align: left;
+}
+
+footer h1 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    padding: 4rem 10% 2rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+footer h1 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.team-member strong {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.team-member span {
+    color: var(--accent); /* Твій основний колір deepskyblue */
+    font-size: 0.9rem;
+}
+
+.footer-contacts a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-contacts a:hover {
+    color: var(--accent);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-link {
+    color: white; 
+    font-size: 1.5rem; 
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    color: var(--accent); 
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #334155;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 191, 255, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(0, 191, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 191, 255, 0); }
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .section-padding { padding: 3rem 5%; }
+    header { 
+        padding: 1rem 5%;
+        flex-direction: column; 
+        gap: 1rem; 
+    }
+    nav ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+}

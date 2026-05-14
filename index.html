@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduStream — Онлайн-школа майбутнього</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+   <header>
+        <a href="#" class="logo">EDU<span>STREAM</span></a>
+        <nav>
+            <ul>
+                <li><a href="#courses">Курси</a></li>
+                <li><a href="#students">Студенти</a></li>
+                <li><a href="#faq">Часті питання</a></li> <li>
+                    <input type="checkbox" id="theme-toggle" class="theme-checkbox">
+                    <label for="theme-toggle" class="theme-label">
+                        <span class="moon">🌙</span>
+                        <span class="sun">☀️</span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Твій шлях у IT починається з тебе</h1>
+        <p>Практичні курси з Frontend, Python, UI/UX та інших напрямків. Мінімум сухих лекцій — максимум реальних задач, командної роботи та підготовки до першої роботи в IT..</p>
+        <a href="#courses" class="btn-pulse">Обрати курс</a>
+    </section>
+
+    <section id="courses" class="section-padding">
+        <h2 class="section-title">Наші курси</h2>
+        <div class="courses-grid">
+            
+            <article class="course-card">
+                <div class="course-img-container">
+                    <img src="img/frontend.jpg" alt="Frontend" class="course-img">
+                </div>
+                <div class="course-content">
+                    <h3>Frontend: React.js</h3>
+                    <p>Створюй сучасні веб-інтерфейси з нуля за допомогою React.</p>
+                    <span class="course-price">12 500 грн</span>
+                    <a href="#" class="btn-card">Детальніше</a>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-img-container">
+                    <img src="img/python.jpg" alt="Python" class="course-img">
+                </div>
+                <div class="course-content">
+                    <h3>Python: Data Science</h3>
+                    <p>Аналізуй дані та будуй нейронні мережі на Python.</p>
+                    <span class="course-price">14 000 грн</span>
+                    <a href="#" class="btn-card">Детальніше</a>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-img-container">
+                    <img src="img/ux.jpg" alt="Design" class="course-img">
+                </div>
+                <div class="course-content">
+                    <h3>UI/UX Master</h3>
+                    <p>Проектування користувацького досвіду та робота у Figma.</p>
+                    <span class="course-price">10 800 грн</span>
+                    <a href="#" class="btn-card">Детальніше</a>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-img-container">
+                    <img src="img/auto.jpg" alt="QA" class="course-img">
+                </div>
+                <div class="course-content">
+                    <h3>QA Automation</h3>
+                    <p>Навчись автоматизувати тестування на Java або Python.</p>
+                    <span class="course-price">11 500 грн</span>
+                    <a href="#" class="btn-card">Детальніше</a>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-img-container">
+                    <img src="img/cibersiqreti.jpg" alt="Cybersecurity" class="course-img">
+                </div>
+                <div class="course-content">
+                    <h3>Cyber Security</h3>
+                    <p>Захищай системи від атак та вивчай етичний хакінг.</p>
+                    <span class="course-price">16 200 грн</span>
+                    <a href="#" class="btn-card">Детальніше</a>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-img-container">
+                    <img src="img/progect.jpg" alt="PM" class="course-img">
+                </div>
+                <div class="course-content">
+                    <h3>Project Manager</h3>
+                    <p>Управління ІТ-проектами за Agile та Scrum методами.</p>
+                    <span class="course-price">13 000 грн</span>
+                    <a href="#" class="btn-card">Детальніше</a>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-img-container">
+                    <img src="img/java.jpg" alt="Java" class="course-img">
+                </div>
+                <div class="course-content">
+                    <h3>Java Developer</h3>
+                    <p>Розробка серверних систем на базі Spring Framework.</p>
+                    <span class="course-price">15 500 грн</span>
+                    <a href="#" class="btn-card">Детальніше</a>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-img-container">
+                    <img src="img/mobele.jpg" alt="Mobile" class="course-img">
+                </div>
+                <div class="course-content">
+                    <h3>Mobile Dev (iOS)</h3>
+                    <p>Створюй нативні додатки для iPhone на мові Swift.</p>
+                    <span class="course-price">17 000 грн</span>
+                    <a href="#" class="btn-card">Детальніше</a>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-img-container">
+                    <img src="img/markiting.jpg" alt="Marketing" class="course-img">
+                </div>
+                <div class="course-content">
+                    <h3>Digital Marketing</h3>
+                    <p>Просування брендів через SEO, SMM та рекламу.</p>
+                    <span class="course-price">9 500 грн</span>
+                    <a href="#" class="btn-card">Детальніше</a>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-img-container">
+                    <img src="img/math.jpg" alt="Mathematics for IT" class="course-img">
+                </div>
+                <div class="course-content">
+                    <h3>Mathematics for Data Science</h3>
+                    <p>Дискретна математика, статистика та лінійна алгебра для роботи з AI.</p>
+                    <span class="course-price">7 200 грн</span>
+                    <a href="#" class="btn-card">Детальніше</a>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-img-container">
+                    <img src="img/ai.jpg" alt="AI Specialist" class="course-img">
+                </div>
+                <div class="course-content">
+                    <h3>AI & Machine Learning</h3>
+                    <p>Створення нейромереж, робота з ChatGPT API та навчання моделей на Python.</p>
+                    <span class="course-price">18 500 грн</span>
+                    <a href="#" class="btn-card">Детальніше</a>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-img-container">
+                    <img src="img/english.jpg" alt="English for Tech" class="course-img">
+                </div>
+                <div class="course-content">
+                    <h3>English for Tech professionals</h3>
+                    <p>Підготовка до співбесід, комунікація з замовниками та технічна термінологія.</p>
+                    <span class="course-price">6 800 грн</span>
+                    <a href="#" class="btn-card">Детальніше</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="students" class="section-padding students-bg">
+        <h2 class="section-title">Наші найкращі випускники</h2>
+        <div class="students-flex">
+            
+            <div class="student-card">
+                <img src="img/olexsandr.jpg" alt="Студент" class="student-photo">
+                <h4>Олександр Коваль</h4>
+                <p>Frontend Dev у Google</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="--target-width: 98%;"></div>
+                </div>
+                <small>Успішність: 98%</small>
+            </div>
+
+            <div class="student-card">
+                <img src="img/maria.jpg" alt="Студент" class="student-photo">
+                <h4>Марія Петренко</h4>
+                <p>UI/UX Lead у Canva</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="--target-width: 95%;"></div>
+                </div>
+                <small>Успішність: 95%</small>
+            </div>
+
+            <div class="student-card">
+                <img src="img/ivan.jpg" alt="Студент" class="student-photo">
+                <h4>Іван Сидоренко</h4>
+                <p>Python Dev у Amazon</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="--target-width: 92%;"></div>
+                </div>
+                <small>Успішність: 92%</small>
+            </div>
+
+            <div class="student-card">
+                <img src="img/olena.jpg" alt="Студент" class="student-photo">
+                <h4>Олена Журба</h4>
+                <p>QA Engineer у SoftServe</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="--target-width: 94%;"></div>
+                </div>
+                <small>Успішність: 94%</small>
+            </div>
+
+            <div class="student-card">
+                <img src="img/sitchenko.jpg" alt="Студент" class="student-photo">
+                <h4>Сітченко Олександр</h4>
+                <p>Cyber Security Lead у Cisco.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="--target-width: 99%;"></div>
+                </div>
+                <small>Успішність: 99%</small>
+            </div>
+
+            <div class="student-card">
+                <img src="img/alinf.jpg" alt="Студент" class="student-photo">
+                <h4>Аліна Шведюк</h4>
+                <p>Senior iOS Developer у Spotify</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="--target-width: 98%;"></div>
+                </div>
+                <small>Успішність: 98%</small>
+            </div>
+
+            <div class="student-card">
+                <img src="img/anton.jpg" alt="Студент" class="student-photo">
+                <h4>Струтинський Антон</h4>
+                <p>AI Research Engineer у OpenAI</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="--target-width: 99%;"></div>
+                </div>
+                <small>Успішність: 99%</small>
+            </div>
+
+            <div class="student-card">
+                <img src="img/krista.jpg" alt="Студент" class="student-photo">
+                <h4>Кінщак Христина</h4>
+                <p>Head of Marketing у Netflixe</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="--target-width: 97%;"></div>
+                </div>
+                <small>Успішність: 97%</small>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="benefits">
+    <h2 class="section-title">Чому варто обрати нас?</h2>
+    <div class="benefits-grid">
+        <div class="benefit-card">
+            <div class="benefit-icon">🚀</div>
+            <h3>Актуальна програма</h3>
+            <p>Наші курси оновлюються кожні 3 місяці відповідно до вимог ринку IT.</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">👨‍🏫</div>
+            <h3>Практики-ментори</h3>
+            <p>Вас навчають не теоретики, а спеціалісти з топових компаній (Senior/Lead рівнів).</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">💼</div>
+            <h3>Кар'єрний супровід</h3>
+            <p>Ми допомагаємо скласти резюме, оформити LinkedIn та готуємо до співбесід.</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">💻</div>
+            <h3>90% практики</h3>
+            <p>Мінімум лекцій — максимум коду та реальних проектів у портфоліо</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">🛡️</div>
+            <h3>Гарантія повернення</h3>
+            <p>Тестовий період 7 днів: не сподобалось — повернемо гроші без зайвих питань</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">♾️</div>
+            <h3>Довічний доступ</h3>
+            <p>Усі лекції та оновлення матеріалів залишаються у вас назавжди</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">💬</div>
+            <h3>Networking</h3>
+            <p>Закрита спільнота студентів та випускників для обміну досвідом та вакансіями</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">💳</div>
+            <h3>Повернення коштів</h3>
+            <p>Впевнені в якості. Якщо протягом першого тижня навчання ви зрозумієте, що курс вам не підходить — ми повернемо 100% оплати</p>
+        </div>
+    </div>
+
+    
+</section>
+
+    <section id="faq" class="section-padding">
+        <h2 class="section-title">Часті запитання</h2>
+<div class="faq-container">
+    <details>
+        <summary>Чи отримаю я сертифікат після навчання?</summary>
+        <div class="faq-content">
+            Так, після успішного захисту фінального проекту ви отримуєте іменний сертифікат.
+        </div>
+    </details>
+
+    <details>
+        <summary>Як проходить практика?</summary>
+        <div class="faq-content">
+            Ви працюєте над реальними кейсами під наглядом менторів-практиків.
+        </div>
+    </details>
+
+    <details>
+        <summary>Чи можна поєднувати навчання з роботою?</summary>
+        <div class="faq-content">
+            Так, графік розрахований на вечірній час або вихідні дні, а записи занять завжди доступні в особистому кабінеті.
+        </div>
+    </details>
+
+    <details>
+        <summary>Що робити, якщо я пропущу онлайн-лекцію?</summary>
+        <div class="faq-content">
+            Усі лекції записуються. Ви зможете переглянути їх у будь-який зручний час і поставити питання ментору в закритому чаті.
+        </div>
+    </details>
+
+    <details>
+        <summary>Який рівень підготовки потрібен для старту?</summary>
+        <div class="faq-content">
+            У нас є курси як для "повного нуля", так і для спеціалістів з досвідом. Детальні вимоги вказані в описі кожного конкретного курсу.
+        </div>
+    </details>
+
+    <details>
+        <summary>Чи допомагаєте ви з працевлаштуванням?</summary>
+        <div class="faq-content">
+            Ми проводимо воркшопи з написання резюме, готуємо до співбесід та рекомендуємо найкращих учнів нашим компаніям-партнерам.
+        </div>
+    </details>
+
+    <details>
+        <summary>Чи є можливість оплати частинами?</summary>
+        <div class="faq-content">
+            Так, ми співпрацюємо з провідними банками та надаємо власну розстрочку без відсотків на весь період навчання.
+        </div>
+    </details>
+</div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-team">
+                <h1>Наша команда</h1>
+                <div class="team-member">
+                    <strong>Олександр Сітченко</strong>
+                    <span>Засновник & CEO</span>
+                </div>
+                <div class="team-member">
+                    <strong>Антон Струтинський</strong>
+                    <span>Технічний директор (CTO)</span>
+                </div>
+            </div>
+
+            <div class="footer-contacts">
+                <h1>Контакти</h1>
+                <p>Email: <a href="mailto:info@edustream.com">info@edustream.com</a></p>
+                <p>Тел: +380 99 123 45 67</p>
+                <div class="social-icons">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2026 EduStream Online School. Всі права захищено.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
